@@ -35,9 +35,9 @@ export class ButtonComponent {
 
   public get classes(): string[] {
     const mode = this.primary
-      ? 'storybook-button--primary'
-      : 'storybook-button--secondary';
+      ? 'shared-button--primary'
+      : 'shared-button--secondary';
 
-    return ['storybook-button', `storybook-button--${this.size}`, mode];
+    return ['shared-button', `shared-button--${this.size}`, mode];
   }
 }
