@@ -1,0 +1,25 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+.fa-2xs {
+    font-size: 0.625em; /* 10px */
+}
+
+.fa-xs {
+    font-size: 0.75em; /* 12px */
+}
+
+.fa-sm {
+    font-size: 0.875em; /* 14px */
+}
+
+.fa-lg {
+    font-size: 1.25em; /* 20px */
+}
+
+.fa-xl {
+    font-size: 1.5em; /* 24px */
+}
+
+.fa-2xl {
+    font-size: 2em; /* 32px */
+}

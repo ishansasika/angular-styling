@@ -1,9 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import "./assets/styles/fonts/index.css";
+@import "./assets/styles/icons/index.css";
+@import "./assets/styles/modules/index.css";
+
 body {
     background-color: transparent;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
-@import "./assets/styles/modules/typography.css";
