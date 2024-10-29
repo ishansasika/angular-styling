@@ -1,8 +1,9 @@
 .shared-button {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     border: 0;
-    border-radius: 3em;
     font-weight: 700;
     line-height: 1;
     font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -12,23 +13,74 @@
     }
 }
 .shared-button--primary {
-    background-color: #1ea7fd;
-    color: white;
+    background-color: var(--color-primary);
+    color: var(--color-light);
 }
+
 .shared-button--secondary {
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
-    background-color: transparent;
-    color: #333;
+    background-color: var(--color-secondary);
+    color: var(--color-dark);
 }
+
+.shared-button--success {
+    background-color: var(--color-success);
+    color: var(--color-light);
+}
+
+.shared-button--warning {
+    background-color: var(--color-warning);
+    color: var(--color-dark);
+}
+
+.shared-button--danger {
+    background-color: var(--color-danger);
+    color: var(--color-light);
+}
+
+.shared-button--info {
+    background-color: var(--color-info);
+    color: var(--color-dark);
+}
+
+.shared-button--light {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    border: 1px solid var(--color-dark);
+}
+
+.shared-button--dark {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
 .shared-button--small {
-    padding: 10px 16px;
+    height: 30px;
+    padding: 0 12px;
     font-size: 12px;
 }
 .shared-button--medium {
-    padding: 11px 20px;
+    padding: 0 20px;
     font-size: 14px;
+    height: 36px;
 }
 .shared-button--large {
-    padding: 12px 24px;
+    padding: 0 24px;
     font-size: 16px;
+    height: 48px;
+}
+
+.rounded--none {
+    border-radius: 0;
+}
+
+.rounded--small {
+    border-radius: 4px;
+}
+
+.rounded--medium {
+    border-radius: 8px;
+}
+
+.rounded--large {
+    border-radius: 16px;
 }

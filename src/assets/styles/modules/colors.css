@@ -1,5 +1,13 @@
 :root {
-    /* Blue */
+    --color-primary: var(--color-blue-5);
+    --color-secondary: var(--color-yellow-5);
+    --color-success: var(--color-green-5);
+    --color-warning: var(--color-orange-5);
+    --color-danger: var(--color-red-5);
+    --color-info: var(--color-lightblue-5);
+    --color-light: var(--color-white);
+    --color-dark: var(--color-black);
+
     --color-blue-0: #e8e9f1;
     --color-blue-1: #b7bad2;
     --color-blue-2: #9598bd;
@@ -34,6 +42,42 @@
     --color-green-7: #9d9a1e;
     --color-green-8: #7a7717;
     --color-green-9: #5d5b12;
+
+    /* Yellow */
+    --color-yellow-0: #fff8e1;
+    --color-yellow-1: #ffecb3;
+    --color-yellow-2: #ffe082;
+    --color-yellow-3: #ffd54f;
+    --color-yellow-4: #ffca28;
+    --color-yellow-5: #ffc107;
+    --color-yellow-6: #ffb300;
+    --color-yellow-7: #ffa000;
+    --color-yellow-8: #ff8f00;
+    --color-yellow-9: #ff6f00;
+
+    /* Orange */
+    --color-orange-0: #fff3e0;
+    --color-orange-1: #ffe0b2;
+    --color-orange-2: #ffcc80;
+    --color-orange-3: #ffb74d;
+    --color-orange-4: #ffa726;
+    --color-orange-5: #ff9800;
+    --color-orange-6: #fb8c00;
+    --color-orange-7: #f57c00;
+    --color-orange-8: #ef6c00;
+    --color-orange-9: #e65100;
+
+    /* Red */
+    --color-red-0: #ffebee;
+    --color-red-1: #ffcdd2;
+    --color-red-2: #ef9a9a;
+    --color-red-3: #e57373;
+    --color-red-4: #ef5350;
+    --color-red-5: #f44336;
+    --color-red-6: #e53935;
+    --color-red-7: #d32f2f;
+    --color-red-8: #c62828;
+    --color-red-9: #b71c1c;
 
     /* Neutral */
     --color-neutral-0: #fcfcfc;

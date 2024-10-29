@@ -2,24 +2,32 @@ import { CommonModule } from '@angular/common';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-button',
+  selector: 'shared-button',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './button.component.html',
   styleUrl: './button.component.css',
 })
 export class ButtonComponent {
-  /** Is this the principal call to action on the page? */
+  /** Color variant for the button */
   @Input()
-  primary = false;
-
-  /** What background color to use */
-  @Input()
-  backgroundColor?: string;
+  variant:
+    | 'primary'
+    | 'secondary'
+    | 'success'
+    | 'warning'
+    | 'danger'
+    | 'info'
+    | 'light'
+    | 'dark' = 'primary';
 
   /** How large should the button be? */
   @Input()
   size: 'small' | 'medium' | 'large' = 'medium';
+
+  /** How rounded should the button be? */
+  @Input()
+  rounded: 'none' | 'small' | 'medium' | 'large' = 'none';
 
   /**
    * Button contents
@@ -27,17 +35,24 @@ export class ButtonComponent {
    * @required
    */
   @Input()
-  label = 'Button';
+  label: string = 'Button Label';
+
+  /** Alternative background color to use */
+  @Input()
+  backgroundColor?: string;
 
   /** Optional click handler */
   @Output()
   onClick = new EventEmitter<Event>();
 
-  public get classes(): string[] {
-    const mode = this.primary
-      ? 'shared-button--primary'
-      : 'shared-button--secondary';
+  /** Optional click handler */
+  @Output()
+  ishan = new EventEmitter<Event>();
 
-    return ['shared-button', `shared-button--${this.size}`, mode];
+  public get classes(): string[] {
+    const variant = `shared-button--${this.variant}`;
+    const size = `shared-button--${this.size}`;
+    const rounded = `rounded--${this.rounded}`;
+    return ['shared-button', variant, size, rounded];
   }
 }

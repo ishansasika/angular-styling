@@ -5,7 +5,7 @@ import { ButtonComponent } from './button.component';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta: Meta<ButtonComponent> = {
-  title: 'Example/Button',
+  title: 'Shared/Button',
   component: ButtonComponent,
   tags: ['autodocs'],
   argTypes: {
@@ -21,29 +21,11 @@ export default meta;
 type Story = StoryObj<ButtonComponent>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Primary: Story = {
+export const Example: Story = {
   args: {
-    primary: true,
-    label: 'Button',
-  },
-};
-
-export const Secondary: Story = {
-  args: {
-    label: 'Button',
-  },
-};
-
-export const Large: Story = {
-  args: {
+    label: 'Button Label',
+    variant: 'primary',
     size: 'large',
-    label: 'Button',
-  },
-};
-
-export const Small: Story = {
-  args: {
-    size: 'small',
-    label: 'Button',
+    rounded: 'small',
   },
 };
