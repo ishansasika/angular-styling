@@ -45,10 +45,6 @@ export class ButtonComponent {
   @Output()
   onClick = new EventEmitter<Event>();
 
-  /** Optional click handler */
-  @Output()
-  ishan = new EventEmitter<Event>();
-
   public get classes(): string[] {
     const variant = `shared-button--${this.variant}`;
     const size = `shared-button--${this.size}`;
