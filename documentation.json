@@ -143,7 +143,7 @@
         },
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-fe2866a7621eb222aa400f873187d04275f0b3341165ef77a5f717b1221b6c0726660f508312c3212d4b5e396567ffc07e593d5744cd9757cf0c9a04a11efed2",
+            "id": "component-ButtonComponent-8ce199ad977896f1552f67acb447c9679a8ed5a34484df8701ef6da934d7c805fe29490164858525bcb40a6c9d0694ef0bfa54b9c0a6c5d64a806702c0e9c6eb",
             "file": "src/app/components/shared/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -165,8 +165,28 @@
                     "deprecationMessage": "",
                     "rawdescription": "\nAlternative background color to use",
                     "description": "<p>Alternative background color to use</p>\n",
-                    "line": 42,
+                    "line": 55,
                     "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "iconLeft",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\nIf the button has a icon aligned in the left side",
+                    "description": "<p>If the button has a icon aligned in the left side</p>\n",
+                    "line": 41,
+                    "type": "\"Arrow Back\" | \"Upload\" | \"Settings\" | \"Star\" | \"Add\" | \"Search\"",
+                    "decorators": []
+                },
+                {
+                    "name": "iconRight",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\nIf the button has a icon aligned in the right side",
+                    "description": "<p>If the button has a icon aligned in the right side</p>\n",
+                    "line": 45,
+                    "type": "\"Arrow Forward\" | \"Delete\" | \"Close\" | \"Add\" | \"Upload\" | \"Search\"",
                     "decorators": []
                 },
                 {
@@ -176,16 +196,16 @@
                     "deprecationMessage": "",
                     "jsdoctags": [
                         {
-                            "pos": 806,
-                            "end": 820,
+                            "pos": 804,
+                            "end": 818,
                             "kind": 327,
                             "id": 0,
                             "flags": 16842752,
                             "modifierFlagsCache": 0,
                             "transformFlags": 0,
                             "tagName": {
-                                "pos": 807,
-                                "end": 815,
+                                "pos": 805,
+                                "end": 813,
                                 "kind": 80,
                                 "id": 0,
                                 "flags": 16842752,
@@ -197,7 +217,7 @@
                     ],
                     "rawdescription": "\n\nButton contents\n\n",
                     "description": "<p>Button contents</p>\n",
-                    "line": 38,
+                    "line": 37,
                     "type": "string",
                     "decorators": []
                 },
@@ -208,7 +228,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "\nHow rounded should the button be?",
                     "description": "<p>How rounded should the button be?</p>\n",
-                    "line": 30,
+                    "line": 29,
                     "type": "\"none\" | \"small\" | \"medium\" | \"large\"",
                     "decorators": []
                 },
@@ -219,7 +239,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "\nHow large should the button be?",
                     "description": "<p>How large should the button be?</p>\n",
-                    "line": 26,
+                    "line": 25,
                     "type": "\"small\" | \"medium\" | \"large\"",
                     "decorators": []
                 },
@@ -230,7 +250,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "\nColor variant for the button",
                     "description": "<p>Color variant for the button</p>\n",
-                    "line": 14,
+                    "line": 13,
                     "type": "\"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\" | \"light\" | \"dark\"",
                     "decorators": []
                 }
@@ -243,11 +263,23 @@
                     "deprecationMessage": "",
                     "rawdescription": "\nOptional click handler",
                     "description": "<p>Optional click handler</p>\n",
-                    "line": 46,
+                    "line": 59,
                     "type": "EventEmitter"
                 }
             ],
-            "propertiesClass": [],
+            "propertiesClass": [
+                {
+                    "name": "icons",
+                    "defaultValue": "{\r\n    'Arrow Forward': 'arrow_forward',\r\n    'Arrow Back': 'arrow_back',\r\n    Upload: 'upload',\r\n    Delete: 'delete',\r\n    Settings: 'settings',\r\n    Star: 'star',\r\n    Close: 'close',\r\n    Add: 'add',\r\n    Search: 'search',\r\n  }",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 61
+                }
+            ],
             "methodsClass": [],
             "deprecated": false,
             "deprecationMessage": "",
@@ -263,7 +295,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'shared-button',\r\n  standalone: true,\r\n  imports: [CommonModule],\r\n  templateUrl: './button.component.html',\r\n  styleUrl: './button.component.css',\r\n})\r\nexport class ButtonComponent {\r\n  /** Color variant for the button */\r\n  @Input()\r\n  variant:\r\n    | 'primary'\r\n    | 'secondary'\r\n    | 'success'\r\n    | 'warning'\r\n    | 'danger'\r\n    | 'info'\r\n    | 'light'\r\n    | 'dark' = 'primary';\r\n\r\n  /** How large should the button be? */\r\n  @Input()\r\n  size: 'small' | 'medium' | 'large' = 'medium';\r\n\r\n  /** How rounded should the button be? */\r\n  @Input()\r\n  rounded: 'none' | 'small' | 'medium' | 'large' = 'none';\r\n\r\n  /**\r\n   * Button contents\r\n   *\r\n   * @required\r\n   */\r\n  @Input()\r\n  label: string = 'Button Label';\r\n\r\n  /** Alternative background color to use */\r\n  @Input()\r\n  backgroundColor?: string;\r\n\r\n  /** Optional click handler */\r\n  @Output()\r\n  onClick = new EventEmitter<Event>();\r\n\r\n  public get classes(): string[] {\r\n    const variant = `shared-button--${this.variant}`;\r\n    const size = `shared-button--${this.size}`;\r\n    const rounded = `rounded--${this.rounded}`;\r\n    return ['shared-button', variant, size, rounded];\r\n  }\r\n}\r\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\r\n@Component({\r\n  selector: 'shared-button',\r\n  standalone: true,\r\n  imports: [CommonModule],\r\n  templateUrl: './button.component.html',\r\n  styleUrl: './button.component.css',\r\n})\r\nexport class ButtonComponent {\r\n  /** Color variant for the button */\r\n  @Input()\r\n  variant:\r\n    | 'primary'\r\n    | 'secondary'\r\n    | 'success'\r\n    | 'warning'\r\n    | 'danger'\r\n    | 'info'\r\n    | 'light'\r\n    | 'dark' = 'primary';\r\n\r\n  /** How large should the button be? */\r\n  @Input()\r\n  size: 'small' | 'medium' | 'large' = 'medium';\r\n\r\n  /** How rounded should the button be? */\r\n  @Input()\r\n  rounded: 'none' | 'small' | 'medium' | 'large' = 'none';\r\n\r\n  /**\r\n   * Button contents\r\n   *\r\n   * @required\r\n   */\r\n  @Input()\r\n  label: string = 'Button Label';\r\n\r\n  /** If the button has a icon aligned in the left side*/\r\n  @Input()\r\n  iconLeft?: 'Arrow Back' | 'Upload' | 'Settings' | 'Star' | 'Add' | 'Search';\r\n\r\n  /** If the button has a icon aligned in the right side */\r\n  @Input()\r\n  iconRight?:\r\n    | 'Arrow Forward'\r\n    | 'Delete'\r\n    | 'Close'\r\n    | 'Add'\r\n    | 'Upload'\r\n    | 'Search';\r\n\r\n  /** Alternative background color to use */\r\n  @Input()\r\n  backgroundColor?: string;\r\n\r\n  /** Optional click handler */\r\n  @Output()\r\n  onClick = new EventEmitter<Event>();\r\n\r\n  icons = {\r\n    'Arrow Forward': 'arrow_forward',\r\n    'Arrow Back': 'arrow_back',\r\n    Upload: 'upload',\r\n    Delete: 'delete',\r\n    Settings: 'settings',\r\n    Star: 'star',\r\n    Close: 'close',\r\n    Add: 'add',\r\n    Search: 'search',\r\n  };\r\n\r\n  public get classes(): string[] {\r\n    const variant = `shared-button--${this.variant}`;\r\n    const size = `shared-button--${this.size}`;\r\n    const rounded = `rounded--${this.rounded}`;\r\n    const iconLeft = this.iconLeft ? 'icon-left' : '';\r\n    const iconRight = this.iconRight ? 'icon-right' : '';\r\n    return ['shared-button', variant, size, rounded, iconLeft, iconRight];\r\n  }\r\n}\r\n",
             "styleUrl": "./button.component.css",
             "assetsDirs": [],
             "styleUrlsData": "",
@@ -276,11 +308,11 @@
                         "name": "classes",
                         "type": "[]",
                         "returnType": "string[]",
-                        "line": 48
+                        "line": 73
                     }
                 }
             },
-            "templateData": "<button\r\n  type=\"button\"\r\n  (click)=\"onClick.emit($event)\"\r\n  [ngClass]=\"classes\"\r\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n>\r\n  {{ label }}\r\n</button>\r\n"
+            "templateData": "<button\r\n  type=\"button\"\r\n  (click)=\"onClick.emit($event)\"\r\n  [ngClass]=\"classes\"\r\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n>\r\n  @if (iconLeft) {\r\n  <span class=\"material-icons-outlined\">{{ icons[iconLeft] }}</span>\r\n  }\r\n  {{ label }}\r\n  @if (iconRight) {\r\n  <span class=\"material-icons-outlined\">{{ icons[iconRight] }}</span>\r\n  }\r\n</button>\r\n"
         },
         {
             "name": "ContentLayoutComponent",
@@ -633,8 +665,8 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "ButtonComponent",
-                "coveragePercent": 85,
-                "coverageCount": "6/7",
+                "coveragePercent": 80,
+                "coverageCount": "8/10",
                 "status": "very-good"
             },
             {

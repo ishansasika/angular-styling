@@ -7,8 +7,13 @@
     --button-medium-font-size: var(--font-size-xs);
     --button-large-font-size: var(--font-size-sm);
 
+    --button-small-padding: 0 12px;
+    --button-medium-padding: 0 16px;
+    --button-large-padding: 0 24px;
+
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 16px;
     align-items: center;
     cursor: pointer;
     border: 0;
@@ -62,17 +67,17 @@
 }
 
 .shared-button--small {
-    padding: 0 12px;
+    padding: var(--button-small-padding);
     font-size: var(--button-small-font-size);
     height: var(--button-small-height);
 }
 .shared-button--medium {
-    padding: 0 20px;
+    padding: var(--button-large-padding);
     font-size: var(--button-medium-font-size);
     height: var(--button-medium-height);
 }
 .shared-button--large {
-    padding: 0 24px;
+    padding: var(--button-large-padding);
     font-size: var(--button-large-font-size);
     height: var(--button-large-height);
 }
@@ -82,13 +87,44 @@
 }
 
 .rounded--small {
-    border-radius: 4px;
+    border-radius: var(--rounded-small);
 }
 
 .rounded--medium {
-    border-radius: 8px;
+    border-radius: var(--rounded-medium);
 }
 
 .rounded--large {
-    border-radius: 16px;
+    border-radius: var(--rounded-large);
+}
+
+.shared-button--small .material-icons-outlined {
+    font-size: 16px;
+}
+
+.shared-button--medium .material-icons-outlined {
+    font-size: 20px;
+}
+
+.shared-button--large .material-icons-outlined {
+    font-size: 24px;
+}
+
+.shared-button--small.icon-left {
+    padding-left: 6px;
+}
+.shared-button--medium.icon-left {
+    padding-left: 8px;
+}
+.shared-button--large.icon-left {
+    padding-left: 12px;
+}
+.shared-button--small.icon-right {
+    padding-right: 6px;
+}
+.shared-button--medium.icon-right {
+    padding-right: 8px;
+}
+.shared-button--large.icon-right {
+    padding-right: 12px;
 }

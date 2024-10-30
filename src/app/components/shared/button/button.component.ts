@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-
 @Component({
   selector: 'shared-button',
   standalone: true,
@@ -37,6 +36,20 @@ export class ButtonComponent {
   @Input()
   label: string = 'Button Label';
 
+  /** If the button has a icon aligned in the left side*/
+  @Input()
+  iconLeft?: 'Arrow Back' | 'Upload' | 'Settings' | 'Star' | 'Add' | 'Search';
+
+  /** If the button has a icon aligned in the right side */
+  @Input()
+  iconRight?:
+    | 'Arrow Forward'
+    | 'Delete'
+    | 'Close'
+    | 'Add'
+    | 'Upload'
+    | 'Search';
+
   /** Alternative background color to use */
   @Input()
   backgroundColor?: string;
@@ -45,10 +58,24 @@ export class ButtonComponent {
   @Output()
   onClick = new EventEmitter<Event>();
 
+  icons = {
+    'Arrow Forward': 'arrow_forward',
+    'Arrow Back': 'arrow_back',
+    Upload: 'upload',
+    Delete: 'delete',
+    Settings: 'settings',
+    Star: 'star',
+    Close: 'close',
+    Add: 'add',
+    Search: 'search',
+  };
+
   public get classes(): string[] {
     const variant = `shared-button--${this.variant}`;
     const size = `shared-button--${this.size}`;
     const rounded = `rounded--${this.rounded}`;
-    return ['shared-button', variant, size, rounded];
+    const iconLeft = this.iconLeft ? 'icon-left' : '';
+    const iconRight = this.iconRight ? 'icon-right' : '';
+    return ['shared-button', variant, size, rounded, iconLeft, iconRight];
   }
 }

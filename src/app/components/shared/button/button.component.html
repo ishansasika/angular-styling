@@ -4,5 +4,11 @@
   [ngClass]="classes"
   [ngStyle]="{ 'background-color': backgroundColor }"
 >
+  @if (iconLeft) {
+  <span class="material-icons-outlined">{{ icons[iconLeft] }}</span>
+  }
   {{ label }}
+  @if (iconRight) {
+  <span class="material-icons-outlined">{{ icons[iconRight] }}</span>
+  }
 </button>
