@@ -1,8 +1,8 @@
 :root {
     --color-primary: var(--color-blue-5);
-    --color-secondary: var(--color-yellow-5);
-    --color-success: var(--color-green-5);
-    --color-warning: var(--color-orange-5);
+    --color-secondary: var(--color-yellow-6);
+    --color-success: var(--color-green-6);
+    --color-warning: var(--color-orange-6);
     --color-danger: var(--color-red-5);
     --color-info: var(--color-lightblue-5);
     --color-light: var(--color-white);
