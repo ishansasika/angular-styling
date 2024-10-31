@@ -13,4 +13,6 @@ export class HomeComponent {
     'assets/images/hero-2.webp',
     'assets/images/hero-3.webp',
   ];
+
+  typography: string[] = ['tiny', 'xs', 'sm', 'md', 'lg', 'xl', '2xl'];
 }

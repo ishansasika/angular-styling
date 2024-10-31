@@ -5,9 +5,9 @@
     --button-large-height: 48px;
 
     /* button font sizes */
-    --button-small-font-size: var(--font-size-tiny);
-    --button-medium-font-size: var(--font-size-xs);
-    --button-large-font-size: var(--font-size-sm);
+    --button-small-font-size: var(--text-size-tiny);
+    --button-medium-font-size: var(--text-size-xs);
+    --button-large-font-size: var(--text-size-sm);
 
     /* button paddings */
     --button-small-padding: 0 12px;

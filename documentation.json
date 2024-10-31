@@ -139,12 +139,12 @@
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<router-outlet />\r\n"
+            "templateData": "<div class=\"bare-layout\"><router-outlet /></div>\r\n"
         },
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-efa114437618f0ad071606c7cd41eec4d414e0b295b35b9804bec93a22f3b2f89eb8d55bc7aafa4c0316d6b00512a1b9ee90f07c23ba9c1d1076d4756e5aafe5",
-            "file": "src/app/components/shared/button/button.component.ts",
+            "id": "component-ButtonComponent-51f376b6aacf272acd14aee6da45914312b5b41f1f1ace3d204f1529b93a6ebcfee4dfee0e3895aa6f6a91375f22cdc75f00949b99616a363fa25c8836b5b8f2",
+            "file": "src/app/shared/components/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -165,7 +165,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "\nAlternative background color to use",
                     "description": "<p>Alternative background color to use</p>\n",
-                    "line": 58,
+                    "line": 62,
                     "type": "string",
                     "decorators": []
                 },
@@ -175,7 +175,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "\nIf the button has a icon aligned in the left side",
                     "description": "<p>If the button has a icon aligned in the left side</p>\n",
-                    "line": 44,
+                    "line": 47,
                     "type": "\"Arrow Back\" | \"Upload\" | \"Settings\" | \"Star\" | \"Add\" | \"Search\"",
                     "decorators": []
                 },
@@ -185,8 +185,8 @@
                     "deprecationMessage": "",
                     "rawdescription": "\nIf the button has a icon aligned in the right side",
                     "description": "<p>If the button has a icon aligned in the right side</p>\n",
-                    "line": 48,
-                    "type": "\"Arrow Forward\" | \"Delete\" | \"Close\" | \"Add\" | \"Upload\" | \"Search\"",
+                    "line": 51,
+                    "type": "\"Arrow Forward\" | \"Delete\" | \"Close\" | \"Add\" | \"Upload\" | \"Search\" | \"Home\"",
                     "decorators": []
                 },
                 {
@@ -196,16 +196,16 @@
                     "deprecationMessage": "",
                     "jsdoctags": [
                         {
-                            "pos": 957,
-                            "end": 971,
+                            "pos": 976,
+                            "end": 990,
                             "kind": 327,
                             "id": 0,
                             "flags": 16842752,
                             "modifierFlagsCache": 0,
                             "transformFlags": 0,
                             "tagName": {
-                                "pos": 958,
-                                "end": 966,
+                                "pos": 977,
+                                "end": 985,
                                 "kind": 80,
                                 "id": 0,
                                 "flags": 16842752,
@@ -217,7 +217,7 @@
                     ],
                     "rawdescription": "\n\nButton contents\n\n",
                     "description": "<p>Button contents</p>\n",
-                    "line": 40,
+                    "line": 43,
                     "type": "string",
                     "decorators": []
                 },
@@ -234,13 +234,13 @@
                 },
                 {
                     "name": "roundedType",
-                    "defaultValue": "'normal'",
+                    "defaultValue": "'default'",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "rawdescription": "\nWhat corners should the button be rounded?",
                     "description": "<p>What corners should the button be rounded?</p>\n",
                     "line": 32,
-                    "type": "\"normal\" | \"top-right-bottom-left\" | \"top-left-bottom-right\"",
+                    "type": "\"default\" | \"top-right-bottom-left\" | \"top-left-bottom-right\"",
                     "decorators": []
                 },
                 {
@@ -274,21 +274,21 @@
                     "deprecationMessage": "",
                     "rawdescription": "\nOptional click handler",
                     "description": "<p>Optional click handler</p>\n",
-                    "line": 62,
+                    "line": 66,
                     "type": "EventEmitter"
                 }
             ],
             "propertiesClass": [
                 {
                     "name": "icons",
-                    "defaultValue": "{\r\n    'Arrow Forward': 'arrow_forward',\r\n    'Arrow Back': 'arrow_back',\r\n    Upload: 'upload',\r\n    Delete: 'delete',\r\n    Settings: 'settings',\r\n    Star: 'star',\r\n    Close: 'close',\r\n    Add: 'add',\r\n    Search: 'search',\r\n  }",
+                    "defaultValue": "{\r\n    'Arrow Forward': 'arrow_forward',\r\n    'Arrow Back': 'arrow_back',\r\n    Upload: 'upload',\r\n    Delete: 'delete',\r\n    Settings: 'settings',\r\n    Star: 'star',\r\n    Close: 'close',\r\n    Add: 'add',\r\n    Search: 'search',\r\n    Home: 'home',\r\n  }",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "object",
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 64
+                    "line": 68
                 }
             ],
             "methodsClass": [],
@@ -306,7 +306,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\r\n@Component({\r\n  selector: 'shared-button',\r\n  standalone: true,\r\n  imports: [CommonModule],\r\n  templateUrl: './button.component.html',\r\n  styleUrl: './button.component.css',\r\n})\r\nexport class ButtonComponent {\r\n  /** Color variant for the button */\r\n  @Input()\r\n  variant:\r\n    | 'primary'\r\n    | 'secondary'\r\n    | 'success'\r\n    | 'warning'\r\n    | 'danger'\r\n    | 'info'\r\n    | 'light'\r\n    | 'dark' = 'primary';\r\n\r\n  /** How large should the button be? */\r\n  @Input()\r\n  size: 'small' | 'medium' | 'large' = 'medium';\r\n\r\n  /** How rounded should the button be? */\r\n  @Input()\r\n  rounded: 'none' | 'small' | 'medium' | 'large' = 'none';\r\n\r\n  /** What corners should the button be rounded? */\r\n  @Input() roundedType: 'normal' | 'top-right-bottom-left' | 'top-left-bottom-right' = 'normal';\r\n\r\n  /**\r\n   * Button contents\r\n   *\r\n   * @required\r\n   */\r\n  @Input()\r\n  label: string = 'Button Label';\r\n\r\n  /** If the button has a icon aligned in the left side*/\r\n  @Input()\r\n  iconLeft?: 'Arrow Back' | 'Upload' | 'Settings' | 'Star' | 'Add' | 'Search';\r\n\r\n  /** If the button has a icon aligned in the right side */\r\n  @Input()\r\n  iconRight?:\r\n    | 'Arrow Forward'\r\n    | 'Delete'\r\n    | 'Close'\r\n    | 'Add'\r\n    | 'Upload'\r\n    | 'Search';\r\n\r\n  /** Alternative background color to use */\r\n  @Input()\r\n  backgroundColor?: string;\r\n\r\n  /** Optional click handler */\r\n  @Output()\r\n  onClick = new EventEmitter<Event>();\r\n\r\n  icons = {\r\n    'Arrow Forward': 'arrow_forward',\r\n    'Arrow Back': 'arrow_back',\r\n    Upload: 'upload',\r\n    Delete: 'delete',\r\n    Settings: 'settings',\r\n    Star: 'star',\r\n    Close: 'close',\r\n    Add: 'add',\r\n    Search: 'search',\r\n  };\r\n\r\n  public get classes(): string[] {\r\n    const variant = `shared-button--${this.variant}`;\r\n    const size = `shared-button--${this.size}`;\r\n    const rounded = `rounded--${this.rounded}`;\r\n\r\n    const roundedType = `rounded--${this.roundedType}`;\r\n    const iconLeft = this.iconLeft ? 'icon-left' : '';\r\n    const iconRight = this.iconRight ? 'icon-right' : '';\r\n    return [\r\n      'shared-button',\r\n      variant,\r\n      size,\r\n      rounded,\r\n      roundedType,\r\n      iconLeft,\r\n      iconRight,\r\n    ];\r\n  }\r\n}\r\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\r\n@Component({\r\n  selector: 'shared-button',\r\n  standalone: true,\r\n  imports: [CommonModule],\r\n  templateUrl: './button.component.html',\r\n  styleUrl: './button.component.css',\r\n})\r\nexport class ButtonComponent {\r\n  /** Color variant for the button */\r\n  @Input()\r\n  variant:\r\n    | 'primary'\r\n    | 'secondary'\r\n    | 'success'\r\n    | 'warning'\r\n    | 'danger'\r\n    | 'info'\r\n    | 'light'\r\n    | 'dark' = 'primary';\r\n\r\n  /** How large should the button be? */\r\n  @Input()\r\n  size: 'small' | 'medium' | 'large' = 'medium';\r\n\r\n  /** How rounded should the button be? */\r\n  @Input()\r\n  rounded: 'none' | 'small' | 'medium' | 'large' = 'none';\r\n\r\n  /** What corners should the button be rounded? */\r\n  @Input() roundedType:\r\n    | 'default'\r\n    | 'top-right-bottom-left'\r\n    | 'top-left-bottom-right' = 'default';\r\n\r\n  /**\r\n   * Button contents\r\n   *\r\n   * @required\r\n   */\r\n  @Input()\r\n  label: string = 'Button Label';\r\n\r\n  /** If the button has a icon aligned in the left side*/\r\n  @Input()\r\n  iconLeft?: 'Arrow Back' | 'Upload' | 'Settings' | 'Star' | 'Add' | 'Search';\r\n\r\n  /** If the button has a icon aligned in the right side */\r\n  @Input()\r\n  iconRight?:\r\n    | 'Arrow Forward'\r\n    | 'Delete'\r\n    | 'Close'\r\n    | 'Add'\r\n    | 'Upload'\r\n    | 'Search'\r\n    | 'Home';\r\n\r\n  /** Alternative background color to use */\r\n  @Input()\r\n  backgroundColor?: string;\r\n\r\n  /** Optional click handler */\r\n  @Output()\r\n  onClick = new EventEmitter<Event>();\r\n\r\n  icons = {\r\n    'Arrow Forward': 'arrow_forward',\r\n    'Arrow Back': 'arrow_back',\r\n    Upload: 'upload',\r\n    Delete: 'delete',\r\n    Settings: 'settings',\r\n    Star: 'star',\r\n    Close: 'close',\r\n    Add: 'add',\r\n    Search: 'search',\r\n    Home: 'home',\r\n  };\r\n\r\n  public get classes(): string[] {\r\n    const variant = `shared-button--${this.variant}`;\r\n    const size = `shared-button--${this.size}`;\r\n    const rounded = `rounded--${this.rounded}`;\r\n\r\n    const roundedType = `rounded--${this.roundedType}`;\r\n    const iconLeft = this.iconLeft ? 'icon-left' : '';\r\n    const iconRight = this.iconRight ? 'icon-right' : '';\r\n    return [\r\n      'shared-button',\r\n      variant,\r\n      size,\r\n      rounded,\r\n      roundedType,\r\n      iconLeft,\r\n      iconRight,\r\n    ];\r\n  }\r\n}\r\n",
             "styleUrl": "./button.component.css",
             "assetsDirs": [],
             "styleUrlsData": "",
@@ -319,7 +319,7 @@
                         "name": "classes",
                         "type": "[]",
                         "returnType": "string[]",
-                        "line": 76
+                        "line": 81
                     }
                 }
             },
@@ -327,7 +327,7 @@
         },
         {
             "name": "ContentLayoutComponent",
-            "id": "component-ContentLayoutComponent-b0f67bc06feee7ec64c71ace9f17d9150a12cd269efdd29d49c596f758db5011e480ad2571f2cde5b33a21481968b4727bd1fb64952671a2f54297a69d588fc9",
+            "id": "component-ContentLayoutComponent-28486e8d469ee7c48cca69dac760ab946663c787d15e7c6295ec245a840c46f6b91a055462ce36a0ee22ab95b31e07c0470dbc21dfac8019130ec765476d6a39",
             "file": "src/app/layouts/content-layout/content-layout.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -367,7 +367,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\r\nimport { RouterOutlet } from '@angular/router';\r\nimport { FooterComponent } from '@components/shell/footer/footer.component';\r\nimport { HeaderComponent } from '@components/shell/header/header.component';\r\n\r\n@Component({\r\n  selector: 'app-content-layout',\r\n  standalone: true,\r\n  imports: [RouterOutlet, FooterComponent, HeaderComponent],\r\n  templateUrl: './content-layout.component.html',\r\n  styleUrl: './content-layout.component.css',\r\n})\r\nexport class ContentLayoutComponent {}\r\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport { RouterOutlet } from '@angular/router';\r\nimport { FooterComponent } from '@shared/shell/footer/footer.component';\r\nimport { HeaderComponent } from '@shared/shell/header/header.component';\r\n\r\n@Component({\r\n  selector: 'app-content-layout',\r\n  standalone: true,\r\n  imports: [RouterOutlet, FooterComponent, HeaderComponent],\r\n  templateUrl: './content-layout.component.html',\r\n  styleUrl: './content-layout.component.css',\r\n})\r\nexport class ContentLayoutComponent {}\r\n",
             "styleUrl": "./content-layout.component.css",
             "assetsDirs": [],
             "styleUrlsData": "",
@@ -377,7 +377,7 @@
         },
         {
             "name": "ErrorComponent",
-            "id": "component-ErrorComponent-42af55b3f7ec9087550fdc2f3feb06a80ca746cc07c64b4bef312c6f23212af208a60fd0ab841d04cec9dc7660498a7d1ea8cdcd5edd94ba9a291f01cd5fdad3",
+            "id": "component-ErrorComponent-8284d638ec43471ff820ad8604ed74db34150fc81f9be7e49cfcacd7725d22a89913afbce693c0294dfc783dc731820385f3223d6d02d056d6536aeea9a4e27f",
             "file": "src/app/pages/error/error.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -401,22 +401,35 @@
             "hostBindings": [],
             "hostListeners": [],
             "standalone": true,
-            "imports": [],
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "ButtonComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "RouterModule",
+                    "type": "module"
+                }
+            ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-error',\r\n  standalone: true,\r\n  imports: [],\r\n  templateUrl: './error.component.html',\r\n  styleUrl: './error.component.css'\r\n})\r\nexport class ErrorComponent {\r\n\r\n}\r\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component } from '@angular/core';\r\nimport { RouterModule } from '@angular/router';\r\nimport { ButtonComponent } from '@shared/components/button/button.component';\r\n\r\n@Component({\r\n  selector: 'app-error',\r\n  standalone: true,\r\n  imports: [CommonModule, ButtonComponent, RouterModule],\r\n  templateUrl: './error.component.html',\r\n  styleUrl: './error.component.css',\r\n})\r\nexport class ErrorComponent {}\r\n",
             "styleUrl": "./error.component.css",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<p>error works!</p>\r\n"
+            "templateData": "<div class=\"error-page\">\r\n  <div\r\n    class=\"container h-100 d-flex flex-column justify-content-center align-items-center gap-3\"\r\n  >\r\n    <p class=\"text-5xl\">Page Not Found</p>\r\n\r\n    <shared-button\r\n      label=\"Go to Home Page\"\r\n      size=\"large\"\r\n      rounded=\"medium\"\r\n      routerLink=\"/\"\r\n      iconRight=\"Home\"\r\n      variant=\"dark\"\r\n    />\r\n  </div>\r\n</div>\r\n"
         },
         {
             "name": "FooterComponent",
             "id": "component-FooterComponent-d9fd279ba65160257f28809ff5129b0f931c685640e00ba10d26ed8e0c6f61f760593d772f016a65e82d55a0f249e5a4b4a3fc2a8a7d82ce364ef7971810e819",
-            "file": "src/app/components/shell/footer/footer.component.ts",
+            "file": "src/app/shared/shell/footer/footer.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -453,8 +466,8 @@
         },
         {
             "name": "HeaderComponent",
-            "id": "component-HeaderComponent-2ffa6a8d846f24ff8b23ff8b1167661b1ab99efcc6bff8ae05c341dcf4bb073ed75980e05dce0c57ba680979e802ee7eea0c1c7578b48ef7d6b8bb11cf92173f",
-            "file": "src/app/components/shell/header/header.component.ts",
+            "id": "component-HeaderComponent-9c1fa350e6f52ed8d33b80f6ac2c22ab905a2019860efea452052d0061910f0ab0716850366e38a34b65d8a0ded7888985c7266a269fb02a3b466d62c638cbbc",
+            "file": "src/app/shared/shell/header/header.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -473,7 +486,7 @@
             "propertiesClass": [
                 {
                     "name": "items",
-                    "defaultValue": "[\r\n    { route: 'typography', label: 'Typography' },\r\n    { route: 'buttons', label: 'Buttons' },\r\n    { route: 'inputs', label: 'Inputs' },\r\n    { route: 'hotels', label: 'Hotels' },\r\n    { route: 'holidays', label: 'Holidays' },\r\n  ]",
+                    "defaultValue": "[\r\n    { route: 'typography', label: 'Typography' },\r\n    { route: 'buttons', label: 'Buttons' },\r\n    { route: 'inputs', label: 'Inputs' },\r\n    { route: 'no-route', label: 'No Route' },\r\n  ]",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "literal type[]",
@@ -506,17 +519,17 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component } from '@angular/core';\r\nimport { RouterModule } from '@angular/router';\r\nimport { ButtonComponent } from '@components/shared/button/button.component';\r\n\r\n@Component({\r\n  selector: 'app-header',\r\n  standalone: true,\r\n  imports: [CommonModule, RouterModule, ButtonComponent],\r\n  templateUrl: './header.component.html',\r\n  styleUrl: './header.component.css',\r\n})\r\nexport class HeaderComponent {\r\n  items: { route: string; label: string }[] = [\r\n    { route: 'typography', label: 'Typography' },\r\n    { route: 'buttons', label: 'Buttons' },\r\n    { route: 'inputs', label: 'Inputs' },\r\n    { route: 'hotels', label: 'Hotels' },\r\n    { route: 'holidays', label: 'Holidays' },\r\n  ];\r\n}\r\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component } from '@angular/core';\r\nimport { RouterModule } from '@angular/router';\r\nimport { ButtonComponent } from '@shared/components/button/button.component';\r\n\r\n@Component({\r\n  selector: 'app-header',\r\n  standalone: true,\r\n  imports: [CommonModule, RouterModule, ButtonComponent],\r\n  templateUrl: './header.component.html',\r\n  styleUrl: './header.component.css',\r\n})\r\nexport class HeaderComponent {\r\n  items: { route: string; label: string }[] = [\r\n    { route: 'typography', label: 'Typography' },\r\n    { route: 'buttons', label: 'Buttons' },\r\n    { route: 'inputs', label: 'Inputs' },\r\n    { route: 'no-route', label: 'No Route' },\r\n  ];\r\n}\r\n",
             "styleUrl": "./header.component.css",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<div class=\"top-element bg-green-4\">Welcome to our website</div>\r\n<div class=\"header\">\r\n  <div class=\"container d-flex justify-content-between align-items-center\">\r\n    <img src=\"assets/images/logo.png\" alt=\"\" width=\"50\" height=\"50\" />\r\n\r\n    <div class=\"nav-container d-flex gap-5\">\r\n      @for (item of items; track $index) {\r\n      <a\r\n        [routerLink]=\"item.route\"\r\n        class=\"text-decoration-none font-inter text-md text-light\"\r\n      >\r\n        {{ item.label }}\r\n      </a>\r\n      }\r\n    </div>\r\n\r\n    <div class=\"d-flex align-items-center gap-3\">\r\n      <shared-button\r\n        variant=\"primary\"\r\n        size=\"large\"\r\n        rounded=\"medium\"\r\n        label=\"Sign In\"\r\n        iconRight=\"Arrow Forward\"\r\n      />\r\n      <shared-button\r\n        variant=\"secondary\"\r\n        size=\"large\"\r\n        rounded=\"medium\"\r\n        label=\"Sign Up\"\r\n        iconRight=\"Upload\"\r\n      />\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+            "templateData": "<div class=\"top-element bg-dark\">\r\n  <div class=\"container d-flex justify-content-between align-items-center\">\r\n    <a\r\n      href=\"mailto:ishansasika@gmail.com\"\r\n      class=\"d-flex gap-1 align-items-center text-decoration-none text-light\"\r\n    >\r\n      <span class=\"material-icons-outlined\">email</span>\r\n      ishansasika&#64;gmail.com\r\n    </a>\r\n\r\n    <a\r\n      href=\"tel:+94772199181\"\r\n      class=\"d-flex gap-1 align-items-center text-decoration-none text-light\"\r\n    >\r\n      <span class=\"material-icons-outlined\">phone</span>+94(77)2199181</a\r\n    >\r\n  </div>\r\n</div>\r\n<div class=\"header\">\r\n  <div\r\n    class=\"container d-flex justify-content-between align-items-center gap-3\"\r\n  >\r\n    <img src=\"assets/images/logo.webp\" alt=\"\" height=\"30\" />\r\n\r\n    <div class=\"nav-container d-flex gap-5\">\r\n      @for (item of items; track $index) {\r\n      <a\r\n        [routerLink]=\"item.route\"\r\n        class=\"text-decoration-none text-md el-messiri text-uppercase gap-2 text-nowrap\"\r\n      >\r\n        {{ item.label }}\r\n      </a>\r\n      }\r\n    </div>\r\n\r\n    <div class=\"d-flex align-items-center gap-3\">\r\n      <shared-button\r\n        variant=\"primary\"\r\n        size=\"large\"\r\n        rounded=\"medium\"\r\n        label=\"Sign In\"\r\n        iconRight=\"Arrow Forward\"\r\n      />\r\n      <shared-button\r\n        variant=\"secondary\"\r\n        size=\"large\"\r\n        rounded=\"medium\"\r\n        label=\"Sign Up\"\r\n        iconRight=\"Upload\"\r\n      />\r\n    </div>\r\n  </div>\r\n</div>\r\n"
         },
         {
             "name": "HomeComponent",
-            "id": "component-HomeComponent-c76c780934cece0a3d64192cbf9dc09e8ee047aa9ea7824fa3d7c3faec7f88656f2f3ccf6f5c343d3f481729eb4e9e79a2f2e2169ba5abc5e3069c752b921501",
+            "id": "component-HomeComponent-e2c35c64404d06c442763d9f5ef489a03cfa387b81306e987aa603c180f146d9f6856e714ad4710a4c5c8a420155a8a8461c7796248a0a6ed69f8168aad92fce",
             "file": "src/app/pages/home/home.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -533,7 +546,19 @@
             "hostDirectives": [],
             "inputsClass": [],
             "outputsClass": [],
-            "propertiesClass": [],
+            "propertiesClass": [
+                {
+                    "name": "heroImages",
+                    "defaultValue": "[\r\n    'assets/images/hero-1.webp',\r\n    'assets/images/hero-2.webp',\r\n    'assets/images/hero-3.webp',\r\n  ]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string[]",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 11
+                }
+            ],
             "methodsClass": [],
             "deprecated": false,
             "deprecationMessage": "",
@@ -544,13 +569,13 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-home',\r\n  standalone: true,\r\n  imports: [],\r\n  templateUrl: './home.component.html',\r\n  styleUrl: './home.component.css'\r\n})\r\nexport class HomeComponent {\r\n\r\n}\r\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-home',\r\n  standalone: true,\r\n  imports: [],\r\n  templateUrl: './home.component.html',\r\n  styleUrl: './home.component.css',\r\n})\r\nexport class HomeComponent {\r\n  heroImages: string[] = [\r\n    'assets/images/hero-1.webp',\r\n    'assets/images/hero-2.webp',\r\n    'assets/images/hero-3.webp',\r\n  ];\r\n}\r\n",
             "styleUrl": "./home.component.css",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<p>home works!</p>\r\n"
+            "templateData": "<div class=\"home-page\">\r\n  <div class=\"d-flex flex-column justify-content-center align-items-center\">\r\n    @for (image of heroImages; track $index) {\r\n    <img\r\n      [src]=\"image\"\r\n      [alt]=\"'hero' + $index\"\r\n      class=\"hero-image object-fit-cover opacity-75\"\r\n    />\r\n    }\r\n  </div>\r\n</div>\r\n"
         }
     ],
     "modules": [],
@@ -697,33 +722,6 @@
                 "status": "low"
             },
             {
-                "filePath": "src/app/components/shared/button/button.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "ButtonComponent",
-                "coveragePercent": 81,
-                "coverageCount": "9/11",
-                "status": "very-good"
-            },
-            {
-                "filePath": "src/app/components/shell/footer/footer.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "FooterComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/components/shell/header/header.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "HeaderComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/2",
-                "status": "low"
-            },
-            {
                 "filePath": "src/app/layouts/barebone-layout/barebone-layout.component.ts",
                 "type": "component",
                 "linktype": "component",
@@ -765,7 +763,34 @@
                 "linktype": "component",
                 "name": "HomeComponent",
                 "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/components/button/button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonComponent",
+                "coveragePercent": 81,
+                "coverageCount": "9/11",
+                "status": "very-good"
+            },
+            {
+                "filePath": "src/app/shared/shell/footer/footer.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FooterComponent",
+                "coveragePercent": 0,
                 "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/shell/header/header.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "HeaderComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
                 "status": "low"
             },
             {

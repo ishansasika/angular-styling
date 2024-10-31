@@ -3,78 +3,79 @@
     --font-family-Inter: "Inter";
     --font-family-ElMessiri: "El Messiri";
     /* font sizes */
-    --font-size-tiny: 12px;
-    --font-size-xs: 14px;
-    --font-size-sm: 16px;
-    --font-size-md: 18px;
-    --font-size-lg: 20px;
-    --font-size-xl: 24px;
-    --font-size-2xl: 28px;
-    --font-size-3xl: 32px;
-    --font-size-4xl: 36px;
-    --font-size-5xl: 40px;
-    --font-size-6xl: 52px;
-    --font-size-7xl: 60px;
-    --font-size-8xl: 72px;
-    --font-size-9xl: 84px;
-    --font-size-10xl: 96px;
-    --font-size-11xl: 108px;
-    --line-height-1: 1;
-    --line-height-15: 1.5;
-    --line-height-tiny: 16px;
-    --line-height-xs: 20px;
-    --line-height-sm: 20px;
-    --line-height-md: 24px;
-    --line-height-lg: 24px;
-    --line-height-xl: 32px;
-    --line-height-2xl: 36px;
-    --line-height-3xl: 40px;
-    --line-height-4xl: 44px;
-    --line-height-5xl: 48px;
-    --line-height-6xl: 64px;
-    --line-height-7xl: 72px;
-    --line-height-8xl: 88px;
-    --line-height-9xl: 100px;
-    --line-height-10xl: 116px;
-    --line-height-11xl: 128px;
+    --text-size-tiny: 12px;
+    --text-size-xs: 14px;
+    --text-size-sm: 16px;
+    --text-size-md: 18px;
+    --text-size-lg: 20px;
+    --text-size-xl: 24px;
+    --text-size-2xl: 28px;
+
+    --heading-size-tiny: 32px;
+    --heading-size-xs: 36px;
+    --heading-size-sm: 40px;
+    --heading-size-md: 52px;
+    --heading-size-lg: 60px;
+    --heading-size-xl: 72px;
+    --heading-size-2xl: 84px;
+
+    /* line heights */
+    --text-height-1: 1;
+    --text-height-15: 1.5;
+
+    --text-height-tiny: 16px;
+    --text-height-xs: 20px;
+    --text-height-sm: 20px;
+    --text-height-md: 24px;
+    --text-height-lg: 24px;
+    --text-height-xl: 32px;
+    --text-height-2xl: 36px;
+
+    --heading-height-tiny: 40px;
+    --heading-height-xs: 44px;
+    --heading-height-sm: 48px;
+    --heading-height-md: 64px;
+    --heading-height-lg: 72px;
+    --heading-height-xl: 88px;
+    --heading-height-2xl: 100px;
 }
 
 @media screen and (max-width: 768px) {
     :root {
-        --font-size-tiny: 12px;
-        --font-size-xs: 14px;
-        --font-size-sm: 16px;
-        --font-size-md: 18px;
-        --font-size-lg: 20px;
-        --font-size-xl: 24px;
-        --font-size-2xl: 28px;
-        --font-size-3xl: 32px;
-        --font-size-4xl: 36px;
-        --font-size-5xl: 40px;
-        --font-size-6xl: 52px;
-        --font-size-7xl: 60px;
-        --font-size-8xl: 72px;
-        --font-size-9xl: 84px;
-        --font-size-10xl: 96px;
-        --font-size-11xl: 108px;
-        --line-height-1: 1;
-        --line-height-15: 1.5;
-        --line-height-tiny: 16px;
-        --line-height-xs: 20px;
-        --line-height-sm: 20px;
-        --line-height-md: 24px;
-        --line-height-lg: 24px;
-        --line-height-xl: 32px;
-        --line-height-2xl: 36px;
-        --line-height-3xl: 40px;
-        --line-height-4xl: 44px;
-        --line-height-5xl: 48px;
-        --line-height-6xl: 64px;
-        --line-height-7xl: 72px;
-        --line-height-8xl: 88px;
-        --line-height-9xl: 100px;
-        --line-height-10xl: 116px;
-        --line-height-11xl: 128px;
+        --text-size-tiny: 12px;
+        --text-size-xs: 14px;
+        --text-size-sm: 16px;
+        --text-size-md: 18px;
+        --text-size-lg: 20px;
+        --text-size-xl: 24px;
+        --text-size-2xl: 28px;
+        --text-size-3xl: 32px;
+        --text-size-4xl: 36px;
+        --text-size-5xl: 40px;
+        --text-size-6xl: 52px;
+        --text-size-7xl: 60px;
+        --text-size-8xl: 72px;
+        --text-size-9xl: 84px;
+        --text-size-10xl: 96px;
+        --text-size-11xl: 108px;
+        --text-height-1: 1;
+        --text-height-15: 1.5;
+        --text-height-tiny: 16px;
+        --text-height-xs: 20px;
+        --text-height-sm: 20px;
+        --text-height-md: 24px;
+        --text-height-lg: 24px;
+        --text-height-xl: 32px;
+        --text-height-2xl: 36px;
+        --text-height-3xl: 40px;
+        --text-height-4xl: 44px;
+        --text-height-5xl: 48px;
+        --text-height-6xl: 64px;
+        --text-height-7xl: 72px;
+        --text-height-8xl: 88px;
+        --text-height-9xl: 100px;
+        --text-height-10xl: 116px;
+        --text-height-11xl: 128px;
     }
 }
 
@@ -83,112 +84,99 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
+/* body texts */
 .text-tiny {
     font-family: var(--font-family-Inter);
-    font-size: var(--font-size-tiny);
-    line-height: var(--line-height-tiny);
+    font-size: var(--text-size-tiny);
+    line-height: var(--text-height-tiny);
 }
 
 .text-xs {
     font-family: var(--font-family-Inter);
-    font-size: var(--font-size-xs);
-    line-height: var(--line-height-xs);
+    font-size: var(--text-size-xs);
+    line-height: var(--text-height-xs);
 }
 
 .text-sm {
     font-family: var(--font-family-Inter);
-    font-size: var(--font-size-sm);
-    line-height: var(--line-height-sm);
+    font-size: var(--text-size-sm);
+    line-height: var(--text-height-sm);
 }
 
 .text-md {
     font-family: var(--font-family-Inter);
-    font-size: var(--font-size-md);
-    line-height: var(--line-height-md);
+    font-size: var(--text-size-md);
+    line-height: var(--text-height-md);
 }
 
 .text-lg {
     font-family: var(--font-family-Inter);
-    font-size: var(--font-size-lg);
-    line-height: var(--line-height-lg);
+    font-size: var(--text-size-lg);
+    line-height: var(--text-height-lg);
 }
 
 .text-xl {
     font-family: var(--font-family-Inter);
-    font-size: var(--font-size-xl);
-    line-height: var(--line-height-xl);
+    font-size: var(--text-size-xl);
+    line-height: var(--text-height-xl);
 }
 
 .text-2xl {
     font-family: var(--font-family-Inter);
-    font-size: var(--font-size-2xl);
-    line-height: var(--line-height-2xl);
+    font-size: var(--text-size-2xl);
+    line-height: var(--text-height-2xl);
 }
 
-.text-3xl {
+/* headings */
+.heading-tiny {
     font-family: var(--font-family-Inter);
-    font-size: var(--font-size-3xl);
-    line-height: var(--line-height-3xl);
+    font-size: var(--heading-size-tiny);
+    line-height: var(--heading-height-tiny);
 }
 
-.text-4xl {
+.heading-xs {
     font-family: var(--font-family-Inter);
-    font-size: var(--font-size-4xl);
-    line-height: var(--line-height-4xl);
+    font-size: var(--heading-size-xs);
+    line-height: var(--heading-height-xs);
 }
 
-.text-5xl {
+.heading-sm {
     font-family: var(--font-family-ElMessiri);
-    font-size: var(--font-size-5xl);
-    line-height: var(--line-height-5xl);
+    font-size: var(--heading-size-sm);
+    line-height: var(--heading-height-sm);
 }
 
-.text-6xl {
+.heading-md {
     font-family: var(--font-family-Inter);
-    font-size: var(--font-size-6xl);
-    line-height: var(--line-height-6xl);
+    font-size: var(--heading-size-md);
+    line-height: var(--heading-height-md);
 }
 
-.text-7xl {
+.heading-lg {
     font-family: var(--font-family-ElMessiri);
-    font-size: var(--font-size-7xl);
-    line-height: var(--line-height-7xl);
+    font-size: var(--heading-size-lg);
+    line-height: var(--heading-height-lg);
 }
 
-.text-8xl {
+.heading-xl {
     font-family: var(--font-family-ElMessiri);
-    font-size: var(--font-size-8xl);
-    line-height: var(--line-height-8xl);
+    font-size: var(--heading-size-xl);
+    line-height: var(--heading-height-xl);
 }
 
-.text-9xl {
+.heading-2xl {
     font-family: var(--font-family-ElMessiri);
-    font-size: var(--font-size-9xl);
-    line-height: var(--line-height-9xl);
-    letter-spacing: 0.5%;
-}
-
-.text-10xl {
-    font-family: var(--font-family-ElMessiri);
-    font-size: var(--font-size-10xl);
-    line-height: var(--line-height-10xl);
-    letter-spacing: 0.5%;
-}
-
-.text-11xl {
-    font-family: var(--font-family-ElMessiri);
-    font-size: var(--font-size-11xl);
-    line-height: var(--line-height-11xl);
+    font-size: var(--heading-size-2xl);
+    line-height: var(--heading-height-2xl);
     letter-spacing: 0.5%;
 }
 
 .line-height-1 {
-    line-height: var(--line-height-1);
+    line-height: var(--text-height-1);
 }
 
 .line-height-15 {
-    line-height: var(--line-height-15) !important;
+    line-height: var(--text-height-15) !important;
 }
 
 .el-messiri {

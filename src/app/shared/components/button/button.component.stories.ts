@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 import { fn } from '@storybook/test';
-import { Description, DescriptionType, Subtitle } from '@storybook/blocks';
 import { ButtonComponent } from './button.component';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
@@ -39,7 +38,7 @@ export const Example: Story = {
     label: 'Button Label',
     variant: 'primary',
     size: 'large',
-    rounded: 'small',
+    rounded: 'medium',
     roundedType: 'default',
   },
 };
