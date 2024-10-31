@@ -1,10 +1,20 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { ButtonComponent } from '@components/shared/button/button.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, RouterModule, ButtonComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  items: { route: string; label: string }[] = [
+    { route: 'typography', label: 'Typography' },
+    { route: 'buttons', label: 'Buttons' },
+    { route: 'inputs', label: 'Inputs' },
+    { route: 'no-route', label: 'No Route' },
+  ];
+}
