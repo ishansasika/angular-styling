@@ -1,12 +1,13 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { ButtonComponent } from '@components/shared/button/button.component';
 
 @Component({
   selector: 'app-error',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, ButtonComponent, RouterModule],
   templateUrl: './error.component.html',
-  styleUrl: './error.component.css'
+  styleUrl: './error.component.css',
 })
-export class ErrorComponent {
-
-}
+export class ErrorComponent {}
