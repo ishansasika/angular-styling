@@ -29,7 +29,7 @@ export class ButtonComponent {
   rounded: 'none' | 'small' | 'medium' | 'large' = 'none';
 
   /** What corners should the button be rounded? */
-  @Input() roundedType?: 'default' | 'top-right-bottom-left' | 'top-left-bottom-right' = 'default';
+  @Input() roundedType: 'default' | 'top-right-bottom-left' | 'top-left-bottom-right' = 'default';
 
   /**
    * Button contents

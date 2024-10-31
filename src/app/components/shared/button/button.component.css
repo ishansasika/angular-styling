@@ -11,6 +11,31 @@
     --button-medium-padding: 0 16px;
     --button-large-padding: 0 24px;
 
+    /* button colors */
+    --button-primary-background-color: var(--color-primary);
+    --button-primary-text-color: var(--color-light);
+
+    --button-secondary-background-color: var(--color-secondary);
+    --button-secondary-text-color: var(--color-dark);
+
+    --button-success-background-color: var(--color-success);
+    --button-success-text-color: var(--color-light);
+
+    --button-warning-background-color: var(--color-warning);
+    --button-warning-text-color: var(--color-light);
+
+    --button-danger-background-color: var(--color-danger);
+    --button-danger-text-color: var(--color-light);
+
+    --button-info-background-color: var(--color-info);
+    --button-info-text-color: var(--color-dark);
+
+    --button-dark-background-color: var(--color-dark);
+    --button-dark-text-color: var(--color-light);
+
+    --button-light-background-color: var(--color-light);
+    --button-light-text-color: var(--color-dark);
+
     /* rounded sizes */
     --rounded-small: 4px;
     --rounded-medium: 8px;
@@ -34,49 +59,46 @@
     font-weight: 400;
     font-family: var(--font-family-Inter);
     transition: 300ms;
-    &:hover {
-        transform: scale(1.05);
-    }
 }
 .shared-button--primary {
-    background-color: var(--color-primary);
-    color: var(--color-light);
+    background-color: var(--button-primary-background-color);
+    color: var(--button-primary-text-color);
 }
 
 .shared-button--secondary {
-    background-color: var(--color-secondary);
-    color: var(--color-dark);
+    background-color: var(--button-secondary-background-color);
+    color: var(--button-secondary-text-color);
 }
 
 .shared-button--success {
-    background-color: var(--color-success);
-    color: var(--color-light);
+    background-color: var(--button-success-background-color);
+    color: var(--button-success-text-color);
 }
 
 .shared-button--warning {
-    background-color: var(--color-warning);
-    color: var(--color-dark);
+    background-color: var(--button-warning-background-color);
+    color: var(--button-warning-text-color);
 }
 
 .shared-button--danger {
-    background-color: var(--color-danger);
-    color: var(--color-light);
+    background-color: var(--button-danger-background-color);
+    color: var(--button-danger-text-color);
 }
 
 .shared-button--info {
-    background-color: var(--color-info);
-    color: var(--color-dark);
+    background-color: var(--button-info-background-color);
+    color: var(--button-info-text-color);
 }
 
 .shared-button--light {
-    background-color: var(--color-light);
-    color: var(--color-dark);
-    border: 1px solid var(--color-dark);
+    background-color: var(--button-light-background-color);
+    color: var(--button-light-text-color);
+    border: 1px solid var(--button-light-text-color);
 }
 
 .shared-button--dark {
-    background-color: var(--color-dark);
-    color: var(--color-light);
+    background-color: var(--button-dark-background-color);
+    color: var(--button-dark-text-color);
 }
 
 .shared-button--small {
@@ -144,6 +166,7 @@
 .shared-button--large.icon-left {
     padding-left: 12px;
 }
+
 .shared-button--small.icon-right {
     padding-right: 6px;
 }
@@ -152,4 +175,15 @@
 }
 .shared-button--large.icon-right {
     padding-right: 12px;
+}
+
+.shared-button:hover {
+    --button-primary-background-color: var(--color-blue-7);
+    --button-secondary-background-color: var(--color-yellow-2);
+    --button-success-background-color: var(--color-green-7);
+    --button-warning-background-color: var(--color-orange-7);
+    --button-danger-background-color: var(--color-red-7);
+    --button-info-background-color: var(--color-lightblue-7);
+    --button-dark-background-color: var(--color-grey-8);
+    --button-light-background-color: var(--color-neutral-7);
 }
