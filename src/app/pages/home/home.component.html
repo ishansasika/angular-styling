@@ -1,1 +1,11 @@
-<p>home works!</p>
+<div class="home-page">
+  <div class="d-flex flex-column justify-content-center align-items-center">
+    @for (image of heroImages; track $index) {
+    <img
+      [src]="image"
+      [alt]="'hero' + $index"
+      class="hero-image object-fit-cover opacity-75"
+    />
+    }
+  </div>
+</div>
