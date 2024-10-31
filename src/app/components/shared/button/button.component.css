@@ -1,12 +1,15 @@
 .shared-button {
+    /* button sizes */
     --button-small-height: 30px;
     --button-medium-height: 36px;
     --button-large-height: 48px;
 
+    /* button font sizes */
     --button-small-font-size: var(--font-size-tiny);
     --button-medium-font-size: var(--font-size-xs);
     --button-large-font-size: var(--font-size-sm);
 
+    /* button paddings */
     --button-small-padding: 0 12px;
     --button-medium-padding: 0 16px;
     --button-large-padding: 0 24px;
@@ -60,6 +63,7 @@
     font-family: var(--font-family-Inter);
     transition: 300ms;
 }
+
 .shared-button--primary {
     background-color: var(--button-primary-background-color);
     color: var(--button-primary-text-color);
@@ -106,11 +110,13 @@
     font-size: var(--button-small-font-size);
     height: var(--button-small-height);
 }
+
 .shared-button--medium {
     padding: var(--button-large-padding);
     font-size: var(--button-medium-font-size);
     height: var(--button-medium-height);
 }
+
 .shared-button--large {
     padding: var(--button-large-padding);
     font-size: var(--button-large-font-size);
@@ -160,9 +166,11 @@
 .shared-button--small.icon-left {
     padding-left: 6px;
 }
+
 .shared-button--medium.icon-left {
     padding-left: 8px;
 }
+
 .shared-button--large.icon-left {
     padding-left: 12px;
 }
@@ -170,9 +178,11 @@
 .shared-button--small.icon-right {
     padding-right: 6px;
 }
+
 .shared-button--medium.icon-right {
     padding-right: 8px;
 }
+
 .shared-button--large.icon-right {
     padding-right: 12px;
 }
