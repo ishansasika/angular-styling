@@ -37,11 +37,6 @@
     --line-height-9xl: 100px;
     --line-height-10xl: 116px;
     --line-height-11xl: 128px;
-
-    /* rounded sizes */
-    --rounded-small: 4px;
-    --rounded-medium: 8px;
-    --rounded-large: 16px;
 }
 
 @media screen and (max-width: 768px) {

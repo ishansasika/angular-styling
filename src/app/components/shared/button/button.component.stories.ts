@@ -40,5 +40,6 @@ export const Example: Story = {
     variant: 'primary',
     size: 'large',
     rounded: 'small',
+    roundedType: 'default',
   },
 };

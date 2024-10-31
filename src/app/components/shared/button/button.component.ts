@@ -28,6 +28,9 @@ export class ButtonComponent {
   @Input()
   rounded: 'none' | 'small' | 'medium' | 'large' = 'none';
 
+  /** What corners should the button be rounded? */
+  @Input() roundedType?: 'default' | 'top-right-bottom-left' | 'top-left-bottom-right' = 'default';
+
   /**
    * Button contents
    *
@@ -74,8 +77,18 @@ export class ButtonComponent {
     const variant = `shared-button--${this.variant}`;
     const size = `shared-button--${this.size}`;
     const rounded = `rounded--${this.rounded}`;
+
+    const roundedType = `rounded--${this.roundedType}`;
     const iconLeft = this.iconLeft ? 'icon-left' : '';
     const iconRight = this.iconRight ? 'icon-right' : '';
-    return ['shared-button', variant, size, rounded, iconLeft, iconRight];
+    return [
+      'shared-button',
+      variant,
+      size,
+      rounded,
+      roundedType,
+      iconLeft,
+      iconRight,
+    ];
   }
 }
