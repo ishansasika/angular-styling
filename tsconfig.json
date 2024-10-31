@@ -24,8 +24,8 @@
       "dom"
     ],
     "paths": {
-      "@components/*": [
-        "app/components/*"
+      "@shared/*": [
+        "app/shared/*"
       ],
       "@pages/*": [
         "app/pages/*"
