@@ -60,8 +60,10 @@
     cursor: pointer;
     border: 0;
     font-weight: 400;
-    font-family: var(--font-family-Inter);
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+        sans-serif;
     transition: 300ms;
+    text-transform: uppercase;
 }
 
 .shared-button--primary {

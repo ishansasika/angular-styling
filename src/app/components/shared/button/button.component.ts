@@ -29,7 +29,10 @@ export class ButtonComponent {
   rounded: 'none' | 'small' | 'medium' | 'large' = 'none';
 
   /** What corners should the button be rounded? */
-  @Input() roundedType: 'default' | 'top-right-bottom-left' | 'top-left-bottom-right' = 'default';
+  @Input() roundedType:
+    | 'default'
+    | 'top-right-bottom-left'
+    | 'top-left-bottom-right' = 'default';
 
   /**
    * Button contents
@@ -51,7 +54,8 @@ export class ButtonComponent {
     | 'Close'
     | 'Add'
     | 'Upload'
-    | 'Search';
+    | 'Search'
+    | 'Home';
 
   /** Alternative background color to use */
   @Input()
@@ -71,6 +75,7 @@ export class ButtonComponent {
     Close: 'close',
     Add: 'add',
     Search: 'search',
+    Home: 'home',
   };
 
   public get classes(): string[] {
