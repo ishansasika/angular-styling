@@ -38,47 +38,11 @@
     --heading-height-lg: 72px;
     --heading-height-xl: 88px;
     --heading-height-2xl: 100px;
-}
 
-@media screen and (max-width: 768px) {
-    :root {
-        /* font sizes */
-        --text-size-tiny: 10px;
-        --text-size-xs: 12px;
-        --text-size-sm: 14px;
-        --text-size-md: 16px;
-        --text-size-lg: 18px;
-        --text-size-xl: 22px;
-        --text-size-2xl: 26px;
-
-        --heading-size-tiny: 30px;
-        --heading-size-xs: 34px;
-        --heading-size-sm: 38px;
-        --heading-size-md: 50px;
-        --heading-size-lg: 58px;
-        --heading-size-xl: 70px;
-        --heading-size-2xl: 82px;
-
-        /* line heights */
-        --text-height-1: 1; /* This is unitless, kept unchanged */
-        --text-height-15: 1.5; /* This is unitless, kept unchanged */
-
-        --text-height-tiny: 14px;
-        --text-height-xs: 18px;
-        --text-height-sm: 18px;
-        --text-height-md: 22px;
-        --text-height-lg: 22px;
-        --text-height-xl: 30px;
-        --text-height-2xl: 34px;
-
-        --heading-height-tiny: 38px;
-        --heading-height-xs: 42px;
-        --heading-height-sm: 46px;
-        --heading-height-md: 62px;
-        --heading-height-lg: 70px;
-        --heading-height-xl: 86px;
-        --heading-height-2xl: 98px;
-    }
+    /* font weights */
+    --font-light: 300;
+    --font-medium: 400;
+    --font-bold: 600;
 }
 
 body {
@@ -173,6 +137,16 @@ body {
     letter-spacing: 0.5%;
 }
 
+.font-light {
+    font-weight: var(--font-light);
+}
+.font-medium {
+    font-weight: var(--font-medium);
+}
+.font-bold {
+    font-weight: var(--font-bold);
+}
+
 .line-height-1 {
     line-height: var(--text-height-1);
 }
@@ -187,4 +161,45 @@ body {
 
 .inter {
     font-family: var(--font-family-Inter) !important;
+}
+
+@media screen and (max-width: 768px) {
+    :root {
+        /* font sizes */
+        --text-size-tiny: 10px;
+        --text-size-xs: 12px;
+        --text-size-sm: 14px;
+        --text-size-md: 16px;
+        --text-size-lg: 18px;
+        --text-size-xl: 22px;
+        --text-size-2xl: 26px;
+
+        --heading-size-tiny: 30px;
+        --heading-size-xs: 34px;
+        --heading-size-sm: 38px;
+        --heading-size-md: 50px;
+        --heading-size-lg: 58px;
+        --heading-size-xl: 70px;
+        --heading-size-2xl: 82px;
+
+        /* line heights */
+        --text-height-1: 1; /* This is unitless, kept unchanged */
+        --text-height-15: 1.5; /* This is unitless, kept unchanged */
+
+        --text-height-tiny: 14px;
+        --text-height-xs: 18px;
+        --text-height-sm: 18px;
+        --text-height-md: 22px;
+        --text-height-lg: 22px;
+        --text-height-xl: 30px;
+        --text-height-2xl: 34px;
+
+        --heading-height-tiny: 38px;
+        --heading-height-xs: 42px;
+        --heading-height-sm: 46px;
+        --heading-height-md: 62px;
+        --heading-height-lg: 70px;
+        --heading-height-xl: 86px;
+        --heading-height-2xl: 98px;
+    }
 }
