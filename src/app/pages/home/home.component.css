@@ -7,6 +7,19 @@
     height: auto;
 }
 
+.viewport {
+    height: 400px;
+    width: 100px;
+    border: 1px solid #ccc;
+}
+
+.item {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .horizontal-scroller {
     display: flex;
     gap: 4px;
