@@ -139,11 +139,11 @@
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<div class=\"bare-layout\"><router-outlet /></div>\r\n"
+            "templateData": "<div class=\"barebone-layout\">\r\n  <router-outlet />\r\n</div>\r\n"
         },
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-51f376b6aacf272acd14aee6da45914312b5b41f1f1ace3d204f1529b93a6ebcfee4dfee0e3895aa6f6a91375f22cdc75f00949b99616a363fa25c8836b5b8f2",
+            "id": "component-ButtonComponent-0032a553b71ecdb3ab18836974350a2d607d1603b60fdffa8ee797212e24863359f23ca9553185d15a196b78bcdbc67c029afa663e5127377bcaa7ccb23c20ad",
             "file": "src/app/shared/components/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -291,7 +291,36 @@
                     "line": 68
                 }
             ],
-            "methodsClass": [],
+            "methodsClass": [
+                {
+                    "name": "buttonCick",
+                    "args": [
+                        {
+                            "name": "event",
+                            "type": "Event",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 81,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "event",
+                            "type": "Event",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
             "deprecated": false,
             "deprecationMessage": "",
             "hostBindings": [],
@@ -306,7 +335,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\r\n@Component({\r\n  selector: 'shared-button',\r\n  standalone: true,\r\n  imports: [CommonModule],\r\n  templateUrl: './button.component.html',\r\n  styleUrl: './button.component.css',\r\n})\r\nexport class ButtonComponent {\r\n  /** Color variant for the button */\r\n  @Input()\r\n  variant:\r\n    | 'primary'\r\n    | 'secondary'\r\n    | 'success'\r\n    | 'warning'\r\n    | 'danger'\r\n    | 'info'\r\n    | 'light'\r\n    | 'dark' = 'primary';\r\n\r\n  /** How large should the button be? */\r\n  @Input()\r\n  size: 'small' | 'medium' | 'large' = 'medium';\r\n\r\n  /** How rounded should the button be? */\r\n  @Input()\r\n  rounded: 'none' | 'small' | 'medium' | 'large' = 'none';\r\n\r\n  /** What corners should the button be rounded? */\r\n  @Input() roundedType:\r\n    | 'default'\r\n    | 'top-right-bottom-left'\r\n    | 'top-left-bottom-right' = 'default';\r\n\r\n  /**\r\n   * Button contents\r\n   *\r\n   * @required\r\n   */\r\n  @Input()\r\n  label: string = 'Button Label';\r\n\r\n  /** If the button has a icon aligned in the left side*/\r\n  @Input()\r\n  iconLeft?: 'Arrow Back' | 'Upload' | 'Settings' | 'Star' | 'Add' | 'Search';\r\n\r\n  /** If the button has a icon aligned in the right side */\r\n  @Input()\r\n  iconRight?:\r\n    | 'Arrow Forward'\r\n    | 'Delete'\r\n    | 'Close'\r\n    | 'Add'\r\n    | 'Upload'\r\n    | 'Search'\r\n    | 'Home';\r\n\r\n  /** Alternative background color to use */\r\n  @Input()\r\n  backgroundColor?: string;\r\n\r\n  /** Optional click handler */\r\n  @Output()\r\n  onClick = new EventEmitter<Event>();\r\n\r\n  icons = {\r\n    'Arrow Forward': 'arrow_forward',\r\n    'Arrow Back': 'arrow_back',\r\n    Upload: 'upload',\r\n    Delete: 'delete',\r\n    Settings: 'settings',\r\n    Star: 'star',\r\n    Close: 'close',\r\n    Add: 'add',\r\n    Search: 'search',\r\n    Home: 'home',\r\n  };\r\n\r\n  public get classes(): string[] {\r\n    const variant = `shared-button--${this.variant}`;\r\n    const size = `shared-button--${this.size}`;\r\n    const rounded = `rounded--${this.rounded}`;\r\n\r\n    const roundedType = `rounded--${this.roundedType}`;\r\n    const iconLeft = this.iconLeft ? 'icon-left' : '';\r\n    const iconRight = this.iconRight ? 'icon-right' : '';\r\n    return [\r\n      'shared-button',\r\n      variant,\r\n      size,\r\n      rounded,\r\n      roundedType,\r\n      iconLeft,\r\n      iconRight,\r\n    ];\r\n  }\r\n}\r\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\r\n@Component({\r\n  selector: 'shared-button',\r\n  standalone: true,\r\n  imports: [CommonModule],\r\n  templateUrl: './button.component.html',\r\n  styleUrl: './button.component.css',\r\n})\r\nexport class ButtonComponent {\r\n  /** Color variant for the button */\r\n  @Input()\r\n  variant:\r\n    | 'primary'\r\n    | 'secondary'\r\n    | 'success'\r\n    | 'warning'\r\n    | 'danger'\r\n    | 'info'\r\n    | 'light'\r\n    | 'dark' = 'primary';\r\n\r\n  /** How large should the button be? */\r\n  @Input()\r\n  size: 'small' | 'medium' | 'large' = 'medium';\r\n\r\n  /** How rounded should the button be? */\r\n  @Input()\r\n  rounded: 'none' | 'small' | 'medium' | 'large' = 'none';\r\n\r\n  /** What corners should the button be rounded? */\r\n  @Input() roundedType:\r\n    | 'default'\r\n    | 'top-right-bottom-left'\r\n    | 'top-left-bottom-right' = 'default';\r\n\r\n  /**\r\n   * Button contents\r\n   *\r\n   * @required\r\n   */\r\n  @Input()\r\n  label: string = 'Button Label';\r\n\r\n  /** If the button has a icon aligned in the left side*/\r\n  @Input()\r\n  iconLeft?: 'Arrow Back' | 'Upload' | 'Settings' | 'Star' | 'Add' | 'Search';\r\n\r\n  /** If the button has a icon aligned in the right side */\r\n  @Input()\r\n  iconRight?:\r\n    | 'Arrow Forward'\r\n    | 'Delete'\r\n    | 'Close'\r\n    | 'Add'\r\n    | 'Upload'\r\n    | 'Search'\r\n    | 'Home';\r\n\r\n  /** Alternative background color to use */\r\n  @Input()\r\n  backgroundColor?: string;\r\n\r\n  /** Optional click handler */\r\n  @Output()\r\n  onClick = new EventEmitter<Event>();\r\n\r\n  icons = {\r\n    'Arrow Forward': 'arrow_forward',\r\n    'Arrow Back': 'arrow_back',\r\n    Upload: 'upload',\r\n    Delete: 'delete',\r\n    Settings: 'settings',\r\n    Star: 'star',\r\n    Close: 'close',\r\n    Add: 'add',\r\n    Search: 'search',\r\n    Home: 'home',\r\n  };\r\n\r\n  buttonCick(event: Event): void {\r\n    this.onClick.emit(event);\r\n  }\r\n\r\n  public get classes(): string[] {\r\n    const variant = `shared-button--${this.variant}`;\r\n    const size = `shared-button--${this.size}`;\r\n    const rounded = `rounded--${this.rounded}`;\r\n\r\n    const roundedType = `rounded--${this.roundedType}`;\r\n    const iconLeft = this.iconLeft ? 'icon-left' : '';\r\n    const iconRight = this.iconRight ? 'icon-right' : '';\r\n    return [\r\n      'shared-button',\r\n      variant,\r\n      size,\r\n      rounded,\r\n      roundedType,\r\n      iconLeft,\r\n      iconRight,\r\n    ];\r\n  }\r\n}\r\n",
             "styleUrl": "./button.component.css",
             "assetsDirs": [],
             "styleUrlsData": "",
@@ -319,11 +348,11 @@
                         "name": "classes",
                         "type": "[]",
                         "returnType": "string[]",
-                        "line": 81
+                        "line": 85
                     }
                 }
             },
-            "templateData": "<button\r\n  type=\"button\"\r\n  (click)=\"onClick.emit($event)\"\r\n  [ngClass]=\"classes\"\r\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n>\r\n  @if (iconLeft) {\r\n  <span class=\"material-icons-outlined\">{{ icons[iconLeft] }}</span>\r\n  }\r\n\r\n  {{ label }}\r\n\r\n  @if (iconRight) {\r\n  <span class=\"material-icons-outlined\">{{ icons[iconRight] }}</span>\r\n  }\r\n</button>\r\n"
+            "templateData": "<button\r\n  type=\"button\"\r\n  (click)=\"buttonCick($event)\"\r\n  [ngClass]=\"classes\"\r\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n>\r\n  @if (iconLeft) {\r\n  <span class=\"material-icons-outlined\">{{ icons[iconLeft] }}</span>\r\n  }\r\n\r\n  {{ label }}\r\n\r\n  @if (iconRight) {\r\n  <span class=\"material-icons-outlined\">{{ icons[iconRight] }}</span>\r\n  }\r\n</button>\r\n"
         },
         {
             "name": "ContentLayoutComponent",
@@ -424,7 +453,7 @@
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<div class=\"error-page\">\r\n  <div\r\n    class=\"container h-100 d-flex flex-column justify-content-center align-items-center gap-3\"\r\n  >\r\n    <p class=\"text-5xl\">Page Not Found</p>\r\n\r\n    <shared-button\r\n      label=\"Go to Home Page\"\r\n      size=\"large\"\r\n      rounded=\"medium\"\r\n      routerLink=\"/\"\r\n      iconRight=\"Home\"\r\n      variant=\"dark\"\r\n    />\r\n  </div>\r\n</div>\r\n"
+            "templateData": "<div class=\"error-page\">\r\n  <div\r\n    class=\"container h-100 d-flex flex-column justify-content-center align-items-center gap-3\"\r\n  >\r\n    <p class=\"heading-lg\">Page Not Found</p>\r\n\r\n    <shared-button\r\n      label=\"Go to Home Page\"\r\n      size=\"large\"\r\n      rounded=\"medium\"\r\n      routerLink=\"/\"\r\n      iconRight=\"Home\"\r\n      variant=\"dark\"\r\n    />\r\n  </div>\r\n</div>\r\n"
         },
         {
             "name": "FooterComponent",
@@ -529,7 +558,7 @@
         },
         {
             "name": "HomeComponent",
-            "id": "component-HomeComponent-e2c35c64404d06c442763d9f5ef489a03cfa387b81306e987aa603c180f146d9f6856e714ad4710a4c5c8a420155a8a8461c7796248a0a6ed69f8168aad92fce",
+            "id": "component-HomeComponent-103b0aec1e0c82519a101ccc620b0c4eb42d85c5715abd3f67ac2a246b3b974cbdc6f9744993d6611231332beb855ee3ee3d4b8c0522ad2f7725d6f3e4538119",
             "file": "src/app/pages/home/home.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -557,6 +586,17 @@
                     "optional": false,
                     "description": "",
                     "line": 11
+                },
+                {
+                    "name": "typography",
+                    "defaultValue": "['tiny', 'xs', 'sm', 'md', 'lg', 'xl', '2xl']",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string[]",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 17
                 }
             ],
             "methodsClass": [],
@@ -569,13 +609,13 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-home',\r\n  standalone: true,\r\n  imports: [],\r\n  templateUrl: './home.component.html',\r\n  styleUrl: './home.component.css',\r\n})\r\nexport class HomeComponent {\r\n  heroImages: string[] = [\r\n    'assets/images/hero-1.webp',\r\n    'assets/images/hero-2.webp',\r\n    'assets/images/hero-3.webp',\r\n  ];\r\n}\r\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-home',\r\n  standalone: true,\r\n  imports: [],\r\n  templateUrl: './home.component.html',\r\n  styleUrl: './home.component.css',\r\n})\r\nexport class HomeComponent {\r\n  heroImages: string[] = [\r\n    'assets/images/hero-1.webp',\r\n    'assets/images/hero-2.webp',\r\n    'assets/images/hero-3.webp',\r\n  ];\r\n\r\n  typography: string[] = ['tiny', 'xs', 'sm', 'md', 'lg', 'xl', '2xl'];\r\n}\r\n",
             "styleUrl": "./home.component.css",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<div class=\"home-page\">\r\n  <div class=\"d-flex flex-column justify-content-center align-items-center\">\r\n    @for (image of heroImages; track $index) {\r\n    <img\r\n      [src]=\"image\"\r\n      [alt]=\"'hero' + $index\"\r\n      class=\"hero-image object-fit-cover opacity-75\"\r\n    />\r\n    }\r\n  </div>\r\n</div>\r\n"
+            "templateData": "<div class=\"home-page\">\r\n  <div class=\"d-flex flex-column justify-content-center align-items-center\">\r\n    <div class=\"typography-section container py-5 d-flex gap-5\">\r\n      <div class=\"d-flex flex-column gap-1\">\r\n        @for (item of typography; track $index) {\r\n\r\n        <p class=\"heading-{{ item }}\">\r\n          <span class=\"text-uppercase\">{{ item }} : </span>Sample Heading\r\n        </p>\r\n\r\n        }\r\n      </div>\r\n\r\n      <div class=\"d-flex flex-column gap-1\">\r\n        @for (item of typography; track $index) {\r\n        <p class=\"text-{{ item }}\">\r\n          <span class=\"text-uppercase\">{{ item }} : </span>Sample Text\r\n        </p>\r\n        }\r\n      </div>\r\n    </div>\r\n\r\n    <!-- @for (image of heroImages; track $index) {\r\n    <img\r\n      [src]=\"image\"\r\n      [alt]=\"'hero' + $index\"\r\n      class=\"hero-image object-fit-cover opacity-75\"\r\n    />\r\n    } -->\r\n  </div>\r\n</div>\r\n"
         }
     ],
     "modules": [],
@@ -679,7 +719,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 6,
+        "count": 5,
         "status": "low",
         "files": [
             {
@@ -763,7 +803,7 @@
                 "linktype": "component",
                 "name": "HomeComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/2",
+                "coverageCount": "0/3",
                 "status": "low"
             },
             {
@@ -771,9 +811,9 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "ButtonComponent",
-                "coveragePercent": 81,
-                "coverageCount": "9/11",
-                "status": "very-good"
+                "coveragePercent": 75,
+                "coverageCount": "9/12",
+                "status": "good"
             },
             {
                 "filePath": "src/app/shared/shell/footer/footer.component.ts",

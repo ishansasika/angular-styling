@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
-import { BareboneLayoutComponent } from '@layouts/barebone-layout/barebone-layout.component';
-import { ContentLayoutComponent } from '@layouts/content-layout/content-layout.component';
+import { BareboneLayoutComponent } from '@shared/layouts/barebone-layout/barebone-layout.component';
+import { ContentLayoutComponent } from '@shared/layouts/content-layout/content-layout.component';
 import { AboutComponent } from '@pages/about/about.component';
 import { HomeComponent } from '@pages/home/home.component';
 import { ErrorComponent } from '@pages/error/error.component';
