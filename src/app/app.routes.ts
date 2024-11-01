@@ -4,6 +4,8 @@ import { ContentLayoutComponent } from '@shared/layouts/content-layout/content-l
 import { AboutComponent } from '@pages/about/about.component';
 import { HomeComponent } from '@pages/home/home.component';
 import { ErrorComponent } from '@pages/error/error.component';
+import { SubLayoutComponent } from '@shared/layouts/sub-layout/sub-layout.component';
+import { ProjectsComponent } from '@pages/projects/projects.component';
 
 export const routes: Routes = [
   {
@@ -15,8 +17,18 @@ export const routes: Routes = [
         component: HomeComponent,
       },
       {
-        path: 'about',
-        component: AboutComponent,
+        path: '',
+        component: SubLayoutComponent,
+        children: [
+          {
+            path: 'about',
+            component: AboutComponent,
+          },
+          {
+            path: 'projects',
+            component: ProjectsComponent,
+          },
+        ],
       },
     ],
   },

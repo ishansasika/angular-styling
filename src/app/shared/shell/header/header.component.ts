@@ -12,9 +12,9 @@ import { ButtonComponent } from '@shared/components/button/button.component';
 })
 export class HeaderComponent {
   items: { route: string; label: string }[] = [
-    { route: 'typography', label: 'Typography' },
-    { route: 'buttons', label: 'Buttons' },
-    { route: 'inputs', label: 'Inputs' },
+    { route: '', label: 'Home' },
+    { route: 'about', label: 'About' },
+    { route: 'projects', label: 'Projects' },
     { route: 'no-route', label: 'No Route' },
   ];
 }

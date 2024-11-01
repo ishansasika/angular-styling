@@ -1,0 +1,10 @@
+.sub-header {
+    background-color: var(--color-grey-3);
+    height: 60px;
+    width: 100%;
+    position: sticky;
+    top: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
