@@ -20,7 +20,5 @@ export class HorizontalScrollerDirective {
         behavior: 'smooth',
       });
     }
-
-    console.log(clickedElement.clientWidth);
   }
 }
